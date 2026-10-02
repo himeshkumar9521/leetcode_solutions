@@ -20,18 +20,6 @@ public:
                     end = mid-1;
                 }
             }
-            st = i+1,end = n-1;
-            while(val == INT_MAX && st<=end){
-                int mid = st+(end-st)/2;
-                if(nums[mid] == (nums[i]-k)){
-                    val = nums[mid];
-                    break;
-                }else if(nums[mid]<(nums[i]-k)){
-                    st = mid+1;
-                }else{
-                    end = mid-1;
-                }
-            }
             if(val == INT_MAX){continue;}
             if(!m.count({nums[i] , val})){
                 count++;
